@@ -1,5 +1,5 @@
 import { BrowserModule, provideClientHydration /*, BrowserTransferStateModule */ } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER,  SecurityContext, PLATFORM_ID, APP_ID } from '@angular/core';
+import { NgModule, APP_INITIALIZER,  SecurityContext, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -91,7 +91,7 @@ export function markedOptionsFactory(): MarkedOptions {
 @NgModule({
   declarations: [AppComponent ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CommonModule,
     HttpClientModule,
     HttpClientJsonpModule,
@@ -169,7 +169,6 @@ export function markedOptionsFactory(): MarkedOptions {
   providers: [
     provideClientHydration(),
     CatchAllGuard,
-    { provide: APP_ID, useValue: 'serverApp' },
     { provide: SITE_NAME, useValue: environment.site },
     { provide: CLIENT_SETTINGS, useValue: new ClientSettings(environment.clientSettings) },
     { provide: MEDIA_SETTINGS, useValue: new MediaSettings(environment.mediaSettings) },
