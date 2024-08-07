@@ -76,7 +76,7 @@ export const environment = {
       authorization_endpoint: "https://www.canva.com/api/oauth/authorize",
       userinfo_endpoint: "https://www.canva.com/api/oauth/userInfo",
       end_session_endpoint: "https://www.canva.com/api/oauth/revoke",
-      token_endpoint: "https://www.canva.com/api/oauth/token",
+      token_endpoint: "https://sio0nkn7b0.execute-api.us-east-1.amazonaws.com/canva/token",
       jwks_uri: "https://api.canva.com/rest/v1/apps/AAGJBJc7pZs/jwks"
     },
     signingKeys: signingKeys.keys
