@@ -4,30 +4,11 @@
 // import { GlobalErrorHandler } from '@classifieds-ui/logging';
 
 // https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
-const signingKeys = {
-  "keys": [
-  {
-  "alg": "RS256",
-  "e": "AQAB",
-  "kid": "LFfHKQ51C81E+ByYd/wucwrvfiEnYJQtJvb4GHbalFQ=",
-  "kty": "RSA",
-  "n": "gijyjUXIzkAPofeaM7JCAsuLHLc_GP3of-NT8ARjSTTMif-wqJeNww4MJkvRYzfL6mL_owVZgD37O4Dd81jBLY6iEyi6hxHYTUuXR7mYkQ2008Fp3m45wztUKWeeNgzsvuR01STkkwmuf7afkQXJUlHts8eT47Dqc4mrKA3vcHYG4vJXmvtjQT-IirkA-yU36TXyd1TPOetdwlmFOcSYfL4CW7ZZfVg1dCvT1T50mO1AaQDMcA8S3fVfROGW36hjiB8r9q5zQrrfBLTMPSVpn85LscVLbYUxJL9yLygiD4UTCXw7Y1hiE2tDL2nmy6PHumylNf8yj5I7N56Kz4cwtQ",
-  "use": "sig"
-  },
-  {
-  "alg": "RS256",
-  "e": "AQAB",
-  "kid": "UNTk4hVhUrq0k8uAGvDYs/w0g/iW+b9PweObMbM6S/w=",
-  "kty": "RSA",
-  "n": "g7Z-JKiovH7ZnwK1o8hsiLf4GfxA9w11RsQK3yQWG3xR__qKbkvxKxhn3Xt5QsUSo8nhiwWtsjUTyVxRO7WJlCjSHGztvYhoYIlwSL8Mqtf3Plg6CrJoDhq7CZDe_TNeQczfBI8k1w5U6n4h5G-e4Fa41nH-qXrDh2L7onTFKSzZDJRCELmh64ur5RmU6kuhwrejwS4YXuz4gKQRcTuDu9AXH7A7cNO5EF_sVRy8hkFtKCPO-mgwJ5S_e5_Y5gleJRpMZnzWmBv_-GpwO5V9XzxBr5s1O9HqyBMXR1pKU_YykeP7PvukEDpyr8UXu-2drzq-oHzXHDInNHjYPLx3BQ",
-  "use": "sig"
-  }
-  ]
-};
+const signingKeys = {"keys":[{"kid":"3659ab51-91cc-4abe-af93-9f758809a27c","kty":"RSA","n":"wP5WYy2xU-PQP-tcMgykacC_n-evEmXF5gwNRPtnXbULcbdrCnpi5Mdb2l7Oy3o8HYBc5HurDVQht1qDFbHwe82DrbKhtdPyfldyD-7zrKl9GapolREEgVmxjbw4hcnyGuCwTxhVDxs7CDK8cct4F5XUnemKVJrW2lmtLhrHrZP6pWl-KrHmUV4nLAhe3gMKcOzIDmkvVbDo3hdVgNalBZ4j3hLcrodTKp7NnsR1q6n6uTBQhZRb_Ah3CHlV_Bj3Hpcl4VK14BQFQyNl77uTXvIdvOO671Iwp1p1F1PbWBHU7NAiyExC6D68vAke_OV7_7apU_tcxIo1d1eyVSJiYQ","e":"AQAB"}]};
 
 export const environment = {
   production: false,
-  site: 'spearhead',
+  site: 'spearhead-canva',
   apiGatewaySettings: {
     // endpointUrl: 'https://localhost:44340',
     endpointUrl: "https://vertigo.druidcloud.dev/rollthecloudinc/spearhead-objects/shapeshifter"
@@ -92,24 +73,24 @@ export const environment = {
     region: ''
   },
   clientSettings: {
-    authority: 'https://sso.druidcloud.dev',
-    client_id: '3lkidn79q4jq8nahkecsguleij',
-    redirect_uri: 'https://spearhead.druidcloud.dev/auth-callback',
-    silent_redirect_uri: 'https://spearhead.druidcloud.dev/silent-refresh.html',
+    authority: 'https://www.canva.com',
+    client_id: 'OC-AZEXdyhN5zus',
+    redirect_uri: 'https://spearhead-canva.climateaware-dev.eco/auth-callback',
+    silent_redirect_uri: 'https://spearhead-canva.climateaware-dev.eco/silent-refresh.html',
     response_type: "code",
-    scope:"openid profile aws.cognito.signin.user.admin ads_api/ads_api taxonomy_api/taxonomy_api chat/chat media_api/media_api profiles_api/profiles_api", /*'ads_api media_api chat IdentityServerApi taxonomy_api api_gateway",*/
+    scope:"design:content:read design:meta:read design:content:write design:permission:read design:permission:write comment:read comment:write brandtemplate:meta:read brandtemplate:content:read profile:read", /*'ads_api media_api chat IdentityServerApi taxonomy_api api_gateway",*/
     filterProtocolClaims: true,
     loadUserInfo: true,
     automaticSilentRenew: true,
     stateStore: undefined,
     userStore: undefined,
     metadata: {
-      issuer: "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_z8PhK3D8V",
-      authorization_endpoint: "https://sso.druidcloud.dev/oauth2/authorize",
-      userinfo_endpoint: "https://sso.druidcloud.dev/oauth2/userInfo",
-      end_session_endpoint: "https://sso.druidcloud.dev/logout",
-      token_endpoint: "https://sso.druidcloud.dev/oauth2/token",
-      jwks_uri: "https://sso.druidcloud.dev/us-east-1_z8PhK3D8V"
+      issuer: "https://api.canva.com/rest/v1/apps/AAGJBJc7pZs",
+      authorization_endpoint: "https://www.canva.com/api/oauth/authorize",
+      userinfo_endpoint: "https://www.canva.com/api/oauth/userInfo",
+      end_session_endpoint: "https://www.canva.com/api/oauth/revoke",
+      token_endpoint: "https://www.canva.com/api/oauth/token",
+      jwks_uri: "https://api.canva.com/rest/v1/apps/AAGJBJc7pZs/jwks"
     },
     signingKeys: signingKeys.keys
   }
