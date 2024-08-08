@@ -11,13 +11,13 @@ export const environment = {
   site: 'spearhead-canva',
   apiGatewaySettings: {
     // endpointUrl: 'https://localhost:44340',
-    endpointUrl: "https://vertigo.druidcloud.dev/rollthecloudinc/spearhead-objects/shapeshifter"
+    endpointUrl: "https://sio0nkn7b0.execute-api.us-east-1.amazonaws.com/rollthecloudinc/spearhead-canva-objects/shapeshifter"
   },
   mediaSettings: {
-    endpointUrl: 'https://vertigo.druidcloud.dev/spearhead/media',
+    endpointUrl: 'https://sio0nkn7b0.execute-api.us-east-1.amazonaws.com/spearhead-canva/media',
     cloudinaryUrl: 'https://api.cloudinary.com/v1_1/dj4vvkgzw',
     uploadPreset: 'i0hm4opm',
-    imageUrl: 'https://vertigo.druidcloud.dev/spearhead',
+    imageUrl: 'https://sio0nkn7b0.execute-api.us-east-1.amazonaws.com/spearhead-canva',
     bucket: 'classifieds-ui-dev',
     prefix: 'media/'
   },
@@ -50,7 +50,7 @@ export const environment = {
   panelsSettings: {
     openSearchDomain: 'search-classifieds-ui-dev-eldczuhq3vesgpjnr3vie6cagq',
     s3Bucket: 'classifieds-ui-dev',
-    objectsRootUrl: 'https://rollthecloudinc.github.io/spearhead-objects'
+    objectsRootUrl: 'https://rollthecloudinc.github.io/spearhead-canva-objects'
   },
   alienaliasSettings: {
     openSearchDomain: 'search-classifieds-ui-dev-eldczuhq3vesgpjnr3vie6cagq'
