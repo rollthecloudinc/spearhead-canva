@@ -75,8 +75,8 @@ export const environment = {
   clientSettings: {
     authority: 'https://www.canva.com',
     client_id: 'OC-AZEXdyhN5zus',
-    redirect_uri: 'https://spearhead-canva.climateaware-dev.eco/auth-callback',
-    silent_redirect_uri: 'https://spearhead-canva.climateaware-dev.eco/silent-refresh.html',
+    redirect_uri: 'https://lovely.climateaware-dev.eco/auth-callback',
+    silent_redirect_uri: 'https://lovely.climateaware-dev.eco/silent-refresh.html',
     response_type: "code",
     scope:"design:content:read design:meta:read design:content:write design:permission:read design:permission:write comment:read comment:write brandtemplate:meta:read brandtemplate:content:read profile:read", /*'ads_api media_api chat IdentityServerApi taxonomy_api api_gateway",*/
     filterProtocolClaims: true,
